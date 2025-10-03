@@ -246,7 +246,7 @@ jobs:
         # VNC密码和语言环境变量
         cf set-env ${{ env.APP_NAME }} LANG "${{ secrets.LANG || 'zh_CN.UTF-8' }}"
         cf set-env ${{ env.APP_NAME }} VNC_PASSWORD "${{ secrets.VNC_PASSWORD || '123456' }}"
-        cf set-env FF_OPEN_URL "www.google.com"
+        
         # 可选：从文件读取环境变量(如果存在)
         if [ -f .env ]; then
           while IFS= read -r line; do
