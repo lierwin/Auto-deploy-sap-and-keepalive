@@ -50,7 +50,7 @@ on:
         default: ''
 
 env:
-  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'louislam/uptime-kuma:1' }}
+  DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'docker.io/louislam/uptime-kuma:latest' }}
   MEMORY: ${{ secrets.MEMORY || '2048M' }}
   DISK: ${{ secrets.DISK || '2048M' }}
 
@@ -224,7 +224,7 @@ jobs:
         echo "ORG=$ORG" >> $GITHUB_ENV
 
         # 获取空间列表
-        SPACE=$(cf spaces | sed -n '4p')
+        SPACE="kuma"
         echo "Selected space: $SPACE"
         echo "SPACE=$SPACE" >> $GITHUB_ENV
 
