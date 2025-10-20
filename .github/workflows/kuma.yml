@@ -224,7 +224,7 @@ jobs:
         echo "ORG=$ORG" >> $GITHUB_ENV
 
         # 获取空间列表
-        SPACE="kuma"
+        SPACE=$(cf spaces | sed -n '4p')
         echo "Selected space: $SPACE"
         echo "SPACE=$SPACE" >> $GITHUB_ENV
 
