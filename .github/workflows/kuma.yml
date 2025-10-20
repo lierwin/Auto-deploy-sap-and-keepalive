@@ -14,7 +14,7 @@ on:
           - AWS-US(VA)
           - AWS-EU(Frankfurt)
           - GCP-US(IA)
-          - Azure-SG(Singapore)
+          - Azure-US(WA)
       app_name:
         description: '应用名称（可选，留空则自动生成）'
         required: false
@@ -66,8 +66,8 @@ jobs:
             echo "CF_API=https://api.cf.us30.hana.ondemand.com" >> $GITHUB_ENV
             echo "APP_NAME=kuma-gcpus$RANDOM_STR" >> $GITHUB_ENV
             ;;
-          "Azure-SG(Singapore)")
-            echo "CF_API=https://api.cf.ap21.hana.ondemand.com" >> $GITHUB_ENV
+          "Azure-US(WA)")
+            echo "CF_API=https://api.cf.us20.hana.ondemand.com" >> $GITHUB_ENV
             echo "APP_NAME=kuma-azsg$RANDOM_STR" >> $GITHUB_ENV
             ;;
         esac
