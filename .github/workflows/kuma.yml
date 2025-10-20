@@ -52,7 +52,7 @@ on:
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKER_IMAGE || 'louislam/uptime-kuma:latest' }}
   MEMORY: ${{ secrets.MEMORY || '1024M' }}
-  DISK: ${{ secrets.DISK || '1024M' }}
+  DISK: ${{ secrets.DISK || '2048M' }}
 
 jobs:
   deploy-app:
