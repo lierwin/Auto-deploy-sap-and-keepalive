@@ -1,4 +1,4 @@
-name: 自动部署Firefox到SAP
+name: 自动部署docker加速服务
 
 on:
   workflow_dispatch:  # 只允许手动触发
